@@ -1,0 +1,17 @@
+name: PowerShell Workflow
+
+on: [push]
+
+jobs:
+  run-powershell:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Run PowerShell script
+      shell: pwsh
+      run: |
+        # You can put your PowerShell script commands here
+        Write-Host "Hello from PowerShell script"
